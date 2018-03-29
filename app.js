@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const settings = require('./settings_example.json');
+//const settings = require('./settings_example.json');
 
 client.on('ready',() => {
 	console.log('I\'m Online\nI\'m Online');
@@ -98,10 +98,10 @@ client.on('message', message => {
 		
 	}
 	if (message.content.startsWith(prefix + 'help')) {
-		console.log(message);
-		//message.channel.send('!pps points time size [save]');
-		//message.channel.send('!list');
-		//message.channel.send('!best [size]');
+		//console.log(message);
+		message.channel.send('!pps points time size [save]');
+		message.channel.send('!list');
+		message.channel.send('!best [size]');
 	}
 	
 });
