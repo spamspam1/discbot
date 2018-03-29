@@ -32,7 +32,7 @@ client.on('message', message => {
 			t_sec = Number(min)*60+Number(sec);
 			pps = points/t_sec/split;
 			pps = Math.round(pps * 100) / 100;
-			message.channel.send(pps.toString()+ " points per second");
+			client.message.send(pps.toString()+ " points per second");
 			
 			const fs = require('fs');
 			
@@ -46,10 +46,10 @@ client.on('message', message => {
 		const fs = require('fs');
 		
 		
-		message.channel.send('Points per second | Points | Time | Size');
+		client.message.send('Points per second | Points | Time | Size');
 		list = fs.readFileSync('points.txt', 'utf8');
 
-		message.channel.send(list);
+		client.message.send(list);
 		
 	}
 	
@@ -66,7 +66,7 @@ client.on('message', message => {
 		}
 		
 		for (i = 0; i<pps.length; i++){pps[i] = +pps[i];}
-		message.channel.send('Points per second | Points | Time | Size');
+		client.message.send('Points per second | Points | Time | Size');
 		
 		str = message.content.split(" ");
 		
@@ -91,16 +91,16 @@ client.on('message', message => {
 			
 			var ind = pp_all.indexOf(Math.max(...pp_all));
 			if ( ind > -1){
-				message.channel.send(lines_all[ind]);
+				client.message.send(lines_all[ind]);
 			}
 		}
 		
 		
 	}
 	if (message.content.startsWith(prefix + 'help')) {
-		message.channel.send('!pps points time size [save]');
-		message.channel.send('!list');
-		message.channel.send('!best [size]');
+		client.message.send('!pps points time size [save]');
+		client.message.send('!list');
+		client.message.send('!best [size]');
 	}
 	
 });
