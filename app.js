@@ -98,9 +98,10 @@ client.on('message', message => {
 		
 	}
 	if (message.content.startsWith(prefix + 'help')) {
-		message.channel.send('!pps points time size [save]');
-		message.channel.send('!list');
-		message.channel.send('!best [size]');
+		console.log(message);
+		//message.channel.send('!pps points time size [save]');
+		//message.channel.send('!list');
+		//message.channel.send('!best [size]');
 	}
 	
 });
