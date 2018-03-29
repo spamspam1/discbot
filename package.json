@@ -1,10 +1,10 @@
 {
   "name": "mybot",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": " Bot",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": ""
   },
   "dependencies": {
     "discord.js": "^10.0.1"
